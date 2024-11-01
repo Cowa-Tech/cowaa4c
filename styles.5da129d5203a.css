@@ -1,0 +1,114 @@
+body {
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar styling */
+aside {
+    background-color: white;
+    color: #1a1a1a;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: width 0.3s ease;
+    overflow-y: auto;
+}
+
+aside.collapsed {
+    width: 80px;
+}
+
+aside .sidebar-text {
+    display: inline-block;
+}
+
+aside.collapsed .sidebar-text {
+    display: none;
+}
+
+aside .sidebar-icon {
+    width: 50px;
+    margin-right: 5px;
+}
+
+aside nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+aside nav a:hover {
+    text-decoration: none;
+    background-color: #f0f0f0;
+}
+
+aside nav a.active {
+    background-color: #7a5ce1;
+    color: white;
+}
+
+/* Main content */
+.main-content {
+    margin-top: 80px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 250px;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+aside.collapsed ~ .main-content {
+    margin-left: 80px;
+}
+
+/* Topbar */
+.topbar {
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 250px;
+    right: 0;
+    z-index: 10;
+    transition: left 0.3s ease;
+}
+
+aside.collapsed ~ .topbar {
+    left: 80px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    aside {
+        width: 250px;
+        left: -250px;
+    }
+
+    aside.open {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .topbar {
+        left: 0;
+    }
+}

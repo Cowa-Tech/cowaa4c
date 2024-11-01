@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e3e3f7; 
+  }
+  
+  .container {
+    margin-top: 80px;
+    color: rgb(23, 8, 51);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; 
+    padding: 50px; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px, rgb(rgb(0, 0, 0, 1));
+  }
+
+  
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-heading {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    font-size: 24px;
+  }
+  
+  .btn {
+    font-size: 24px;
+  }
+  
+  .heading {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .belowSubmit {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .A4C_LOGO{
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 568px) {
+    .heading {
+
+      margin-top: 60px;
+    }
+    .form-heading{
+      font-size: 20px;
+      text-align: center;
+    }
+    .A4C_LOGO{
+      margin-top: 200px;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 0px;
+    }
+}
+  
+
+
+
